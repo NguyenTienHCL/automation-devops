@@ -22,6 +22,7 @@ pipeline {
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd1', variable: 'dockerhubpwd')]) {
                    sh 'docker login -u tiennguyenhcl -p ${dockerhubpwd}'
+                       
 
 }
                    sh 'docker push tiennguyenhcl/devops-integration'
